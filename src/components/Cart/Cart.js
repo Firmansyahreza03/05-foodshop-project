@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState, Fragment } from "react";
 
 import Modal from "../UI/Modal";
 import CartContext from "../../store/cart-context";
@@ -6,8 +6,6 @@ import CartItem from "./CartItem";
 import Checkout from "./Checkout";
 
 import classes from "./Cart.module.css";
-import { useState } from "react/cjs/react.development";
-import { Fragment } from "react/cjs/react.production.min";
 
 const Cart = (props) => {
   const [isCheckout, setIsCheckout] = useState(false); //status cekout false
