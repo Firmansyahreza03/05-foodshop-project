@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swab");
+
 .header {
   position: fixed;
   top: 0;
@@ -5,7 +7,6 @@
   width: 80%;
   height: 5rem;
   background-color: #8a2b06;
-  color: white;
   display: flex;
   justify-content: space-between;
   padding: 0 10%;
@@ -14,9 +15,36 @@
   z-index: 10;
 }
 
-/* .title {
-  padding: 0 10%;
-} */
+.title {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  z-index: 0;
+}
+
+.title::before {
+  content: "";
+  inset: 0;
+  background: #ad5502;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.title:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  background: white;
+}
+
+.title:hover {
+  color: black;
+}
 
 .main-image {
   width: 100%;
