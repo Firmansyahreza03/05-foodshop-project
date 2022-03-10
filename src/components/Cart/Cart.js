@@ -60,7 +60,7 @@ const Cart = (props) => {
   const submitOrderHandler = async (userData) => {
     setIsSubmitting(true); //kirim data maka status loading true
     await fetch(
-      "https://react-app-foodshop-default-rtdb.firebaseio.com/orderlist.json",
+      "https://food-shop-d18d3-default-rtdb.firebaseio.com/orderlist.json",
       {
         method: "POST",
         body: JSON.stringify({
